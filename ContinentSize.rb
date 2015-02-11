@@ -28,15 +28,15 @@ def continentSize world, x, y
 	world[y][x] = 'counted land'
 
 	size = size + continentSize(world, x-1, y-1)
-	size = size + continentSize(world, x , y-1)
+	size = size + continentSize(world, x ,  y-1)
 	size = size + continentSize(world, x+1, y-1)
 	size = size + continentSize(world, x-1, y )
 	size = size + continentSize(world, x+1, y )
 	size = size + continentSize(world, x-1, y+1)
-	size = size + continentSize(world, x , y+1)
+	size = size + continentSize(world, x ,  y+1)
 	size = size + continentSize(world, x+1, y+1)
 
-	size
+	return size
 end
 
 puts continentSize(world, 5, 5)
